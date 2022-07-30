@@ -14,7 +14,7 @@ public class p12977 {
 	                    
 	                    sum = nums[i]+nums[j]+nums[k];
 	                         // 여기서부터 수정
-	                    
+	                    	// 테스트
 	                        
 	                    for (int p = 2; p<=(int)Math.sqrt(sum); p++) {
 	                          if (sum % p == 0) { answer++; System.out.print(answer); }
