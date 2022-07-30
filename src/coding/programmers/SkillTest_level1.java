@@ -2,7 +2,7 @@ package coding.programmers;
 
 import java.util.Scanner;
 
-public class SkillTest {
+public class SkillTest_level1 {
 //프로그래머스 : 스킬테스트체크 Level1.굿스타터
 }
 
