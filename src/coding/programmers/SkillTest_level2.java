@@ -1,6 +1,31 @@
 package coding.programmers;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
+class Dto {
+	public int x;
+	public int y;
+	
+	public Dto(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	
+}
+
 public class SkillTest_level2 {
+
+
+	
+	
+	public static void main (String[] args) {
+	
+	
+	
+	
 	//https://programmers.co.kr/skill_checks/400799?challenge_id=9575
 	
 /*	문제 설명
@@ -119,4 +144,24 @@ public class SkillTest_level2 {
 	RisingStarExpression.png
 
 	또, AD - BC = 0인 경우 두 직선은 평행 또는 일치합니다.*/
+	
+
+//	ArrayList<int>
+//	X = [x1, x2, ...];
+//	Y = [y1, y2, ...];
+//	ArrayList<int, int>
+//	loc = [(x1,y1), (x2, y2), ...];	
+//	
+//	list.add('이름', '나이', '성별');
+//	[['혜민', 28, '여'], [], [] ...];
+//	
+	
+	ArrayList<Dto> lists = new ArrayList<Dto>();
+	List<Integer> list = new ArrayList<Integer>();
+	list.add(null);
+	lists.add(new Dto(1, 3));
+	
+
+	System.out.println(lists.get(0).x +" "+ lists.get(0).y);
+	}
 }
