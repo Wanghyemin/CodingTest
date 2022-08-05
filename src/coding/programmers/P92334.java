@@ -1,52 +1,70 @@
-package coding.programmers;
-
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
 
-public class P92334 {
+public class p92334 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-		String a = "Apple Pie";
-		String[] b = a.split(" ");
-		System.out.println(b[1]);
+
+		String[] report = {"1 3", "2 4"};
+		String [] id_list = {"1","2"};
+		int k = 1;
+		////////////////////////////////////// 
 		
-		HashSet<String> hs = new HashSet<>();
-		
-		hs.add("me");
-		
-		Iterator<String> iter = hs.iterator();
-		
-		while(iter.hasNext()) {
-			System.out.println(iter.next());
-		}
+        String[] report_sep = new String[2]; 
+        String[] A = new String[report.length];
+        String[] B = new String[report.length];
+        HashSet<String> B_new = new HashSet<String>();
+        int[] BB = new int[id_list.length]; // ì¤‘ë³µë˜ì§€ ì•ŠëŠ” ì‹ ê³ ë‹¹í•œ íšŸìˆ˜
+        int[] AB = new int[id_list.length];
+        
+        for(int i = 0; i<report.length; i++){
+        	report_sep = report[i].split(" ");
+            A[i] = report_sep[0]; // ì‹ ê³ ì 
+            B[i] = report_sep[1]; // ì‹ ê³ ëŒ€ìƒ
+            
+            report_sep=null;
+        }
+        
+        System.out.println(B[1] + B[0]);
+        
+        
+        for(int i = 0; i<report.length; i++){
+        	for (int j=0; j<A.length; j++) {
+            	if( id_list[i] == A[j]) { // iìœ ì € == jì‹ ê³ ì : ì‹ ê³ ì
+            		B_new.add(B[j]); // iìœ ì €ì— ëŒ€í•œ jì‹ ê³ ëŒ€ìƒ ì¤‘ë³µì œê±°
+            		 System.out.println(B_new.size() + i + "a"); 
+            	}
+        	}
+        }
+        	
+//        	//id_list[i]ì— í•´ë‹¹í•˜ëŠ” B_newë¥¼ ì´í„°ë ˆì´í„°ë¡œ ì½ì–´ì„œ String[] BBë¥¼ ë§Œë“¬
+//        	Iterator<String> iter = B_new.iterator();
+//        	while(iter.hasNext()) {
+//        		for(int kk=0; kk<id_list.length; kk++) {
+//        			if(id_list[kk] == iter.next()) { // kkìœ ì € == kì‹ ê³ ëŒ€ìƒ
+//        				BB[kk] += 1; // id_list[kk]ë²ˆì§¸ì˜ ì‹ ê³  íšŸìˆ˜ë¥¼ BBì— ì €ì¥
+//        			}	
+//        		}
+//        	}
+//        	B_new = null;
+//        }
+//
+//
+//    	for(int j=0; j<id_list.length; j++) {
+//            for(int i=0; i<id_list.length; i++) {
+//        		if(BB[j] >=k && id_list[j] == B[i]) {
+//        			AB[i] += 1;
+//        		}
+//        	}
+//        }
+//        
+//    	//////////
+//        for(int i=0; i<id_list.length; i++) {
+//        	System.out.println(AB[i]);
+//        }
+        
+
 	}
 
-}
-
-class Solution {
-    public int[] solution(String[] id_list, String[] report, int k) {
-        int[] answer = {};
-
-        // Ã¹¹øÂ° »ç¶÷ÀÌ ½Å°íÇÑ ¾ÆÀÌµğ ¸ğÀ¸±â
-        for(int i = 0; i<id_list.length; i++){
-            for(int j=0; j<report.length; j++){
-                String[] report_new = report[j].split(" ");
-                if(id_list[i] == report_new[0]){
-                    
-                }
-                
-                
-                
-            }
-           
-        }
-        // ½Å°íÇÑ ¾ÆÀÌµğ ÀüÃ¼ Áß k°¡ ³Ñ´Â ½Å°í¾ÆÀÌµğ Ã£±â
-        
-        // Ã¹¹øÂ° »ç¶÷ÀÌ ½Å°íÇÑ ¾ÆÀÌµğ Áß Á¤Áö´çÇÑ ¾ÆÀÌµğ ¼ıÀÚ ±¸ÇÏ±â
-        
-        return answer;
-    }
+	
 }
