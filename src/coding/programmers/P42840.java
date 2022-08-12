@@ -1,5 +1,8 @@
 package coding.programmers;
 
+import java.util.HashMap;
+import java.util.Map;
+
 // 프로그래머스 : 모의고사
 
 public class P42840 {
@@ -11,16 +14,14 @@ public class P42840 {
 			int[] p1 = new int[size];
 			int[] p2 = new int[size];
 			int[] p3 = new int[size];
+            int[] answer;
 
-			int pa1 = 0;
-			int pa2 = 0;
-			int pa3 = 0;
-						
+			int[] array = {0,0,0};
 			
 			for (int i = 0; i < size; i++) {
 				if ((i + 1) % 5 != 0) {
 					p1[i] = (i + 1) % 5;
-					System.out.print(p1[i]);
+			
 				} else {
 					p1[i] = 5;
 				}
@@ -53,20 +54,40 @@ public class P42840 {
 			
 			for(int i=0; i<size; i++) {
 				if(answers[i]==p1[i]) {
-					pa1++;
+					array[0]++;
 				}
 				if(answers[i]==p2[i]) {
-					pa2++;
+					array[1]++;
 				}
 				if(answers[i]==p3[i]) {
-					pa3++;
+					array[2]++;
 				}
 			}
 			
-			
+			int max=0;
+            
+            for(int i=0;i<3;i++){
+                if(array[i]>max){
+                    max=array[i];
+                }
+            }
+            int k = 0;
+            for(int i=0; i<3; i++){
+                if(array[i]==max){
+                    k++;
+                }
+            }
+             answer = new int[k];
+            for(int i=0; i<3; i++){
+                if(array[i]==max){
+                   
+                    answer[i] = i+1;
+                }
+            }
+            
 
-			return p1;
-		}
-	}
+			return answer;
+        }
+}
 
 }
