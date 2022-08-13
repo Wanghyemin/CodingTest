@@ -93,9 +93,11 @@ import java.util.Map;
 //		}
 //	}
 
-class MySolution {
+class OtherSolution {
 	public static int[] solution(int[] answers) {
-		int[][] patterns = { { 1, 2, 3, 4, 5 }, { 2, 1, 2, 3, 2, 4, 2, 5 }, { 3, 3, 1, 1, 2, 2, 4, 4, 5, 5 } };
+		int[][] patterns = { { 1, 2, 3, 4, 5 }, 
+							 { 2, 1, 2, 3, 2, 4, 2, 5 }, 
+							 { 3, 3, 1, 1, 2, 2, 4, 4, 5, 5 } };
 
 		int[] hit = new int[3];
 		for (int i = 0; i < hit.length; i++) {
